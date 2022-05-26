@@ -70,7 +70,7 @@
     "url": "git+https://github.com/rocketseat/adonis-bull.git"
   },
   "dependencies": {
-    "bull": "^3.22.1",
+    "bull": "^3.29.3",
     "bull-board": "^1.5.1",
     "date-fns": "^2.7.0",
     "human-interval": "^0.1.6"
