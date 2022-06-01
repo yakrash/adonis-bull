@@ -47,14 +47,14 @@ class Queue {
           config = this.connections[Job.connection]
         }
 
-        queues[Job.key] = {
-          bull: new Bull(Job.key, config),
+        Job.key.forEach(key => queues[key] = {
+          bull: new Bull(key, config),
           Job,
-          name: Job.key,
+          name: key,
           handle: Job.handle,
           concurrency: Job.concurrency || 1,
           options: Job.options,
-        }
+        });
 
         return queues
       }, {})
